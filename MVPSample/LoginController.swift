@@ -9,6 +9,8 @@ import UIKit
 
 class LoginController: UIViewController, LoginProtocol {
     
+    
+    // Delegate var
     var presenter: LoginPresenter?
     
 
@@ -32,6 +34,7 @@ class LoginController: UIViewController, LoginProtocol {
     
     func setUI(){
         self.spinner.hidesWhenStopped = true
+        //self.passTfd.secureTextEntry = true
         presenter = LoginPresenter()
         presenter?.attachView(view: self)
     }
@@ -55,7 +58,9 @@ class LoginController: UIViewController, LoginProtocol {
         navigationController?.pushViewController(home, animated: true)
     }
     
-    
+    func pushModal(title: String, message: String) {
+        showAlert(title: title, mensaje: message, vc: self)
+    }
 
 }
 

@@ -65,7 +65,7 @@
                         <constraint firstAttribute="height" constant="34" id="Qz3-R6-H0h"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgC-KN-aFl" customClass="CustomButton" customModule="MVPSample" customModuleProvider="target">
                     <rect key="frame" x="73" y="681" width="268" height="37"/>

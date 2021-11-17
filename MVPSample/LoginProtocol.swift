@@ -13,4 +13,6 @@ protocol LoginProtocol {
     func startLoading()
     func stopLoading()
     func pushView()
+    func pushModal(title: String, message: String)
+    
 }

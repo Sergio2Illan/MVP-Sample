@@ -16,6 +16,7 @@ struct Users: Codable {
     let address: Address
     let phone, website: String
     let company: Company
+    
 }
 
 // MARK: - Address

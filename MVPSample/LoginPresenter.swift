@@ -22,33 +22,37 @@ class LoginPresenter {
     }
     
     func validateFields(name: String?, pass: String?){
-        view?.startLoading()
-        guard let name = name else { return }
-        guard let pass = pass else { return }
+        guard let user = name else { return }
+        guard let password = pass else { return }
         
-        if (name.count > 0 && name != "" ) {
-            if (pass.count > 0 && pass != "" ) {
-                if isValidEmail(testStr: name){
-                    if isValidPassword(pass: pass){
+        if (!user.isEmpty) {
+            if (!password.isEmpty ) {
+                if isValidEmail(testStr: user){
+                    if isValidPassword(pass: password){
+                        view?.startLoading()
                         ExternalDataManager.shared.getDataLoginFromServer { data in
+                            if self.isUserRegistered(users: data, usuario: user) {
+                                //TODO: Save user data to present in the home
+                                let user = self.getUser(users: data, user: user)
+                                self.view?.stopLoading()
+                                self.view?.pushView()
+                            }
                             
-                            //TODO: Call function to validate data
-                            self.view?.pushView()
                         } onFailure: { error in
-                            //TODO: Show error menssaged
+                            self.view?.pushModal(title: "Error", message: error)
                         }
 
                     }else {
-                        //TODO: Show error menssage
+                        view?.pushModal(title: "Error", message: "The password needs 5 charwcteres including a special character.")
                     }
                 }else{
-                    //TODO: Show error menssage
+                    view?.pushModal(title: "Error", message: "The format has to be like XXXX@XXXX.XX")
                 }
             }else{
-                //TODO: Show error menssage
+                view?.pushModal(title: "Error", message: "The field password is empty.")
             }
         }else {
-            //TODO: Show error menssage
+            view?.pushModal(title: "Error", message: "The field user is empty.")
         }
         
     }
