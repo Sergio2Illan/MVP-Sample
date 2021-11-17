@@ -111,6 +111,9 @@
 		E6A2CEAB2744DE1600950B6A /* MVPSample */ = {
 			isa = PBXGroup;
 			children = (
+				E6C2703A2744FCBB00069C9E /* Utils */,
+				E6C270292744E46B00069C9E /* Extensions */,
+				E6C270262744E45700069C9E /* DataManager */,
 				E6C270252744E45000069C9E /* Login */,
 				E6A2CEAC2744DE1600950B6A /* AppDelegate.swift */,
 				E6A2CEAE2744DE1600950B6A /* SceneDelegate.swift */,
@@ -141,13 +144,10 @@
 		E6C270252744E45000069C9E /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E6C2703A2744FCBB00069C9E /* Utils */,
 				E6C270352744E99D00069C9E /* Views */,
 				E6C2702A2744E47200069C9E /* Protocols */,
-				E6C270292744E46B00069C9E /* Extensions */,
 				E6C270282744E46400069C9E /* Presenter */,
 				E6C270272744E45E00069C9E /* Model */,
-				E6C270262744E45700069C9E /* DataManager */,
 			);
 			path = Login;
 			sourceTree = "<group>";

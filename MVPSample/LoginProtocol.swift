@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+
+protocol LoginProtocol {
+    var presenter: LoginPresenter?  { get set }
+    func startLoading()
+    func stopLoading()
+    func getDataData()
+}

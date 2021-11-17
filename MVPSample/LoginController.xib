@@ -10,6 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController" customModule="MVPSample" customModuleProvider="target">
             <connections>
+                <outlet property="imageLogo" destination="dna-3m-730" id="xwg-76-PDu"/>
+                <outlet property="passTfd" destination="bT8-0w-Us5" id="sOM-z5-Vkl"/>
+                <outlet property="sigInBtn" destination="NgC-KN-aFl" id="rJY-OJ-zKo"/>
+                <outlet property="spinner" destination="ZVV-cU-wS2" id="G8U-DT-2zg"/>
+                <outlet property="titleLogo" destination="XiZ-hZ-1aI" id="QyR-bH-LQ8"/>
+                <outlet property="userTfd" destination="bHi-bB-Ffx" id="KF3-pW-KWu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -70,11 +76,17 @@
                     <buttonConfiguration key="configuration" style="plain" title="Sign In" titleAlignment="center">
                         <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="didSignIn:" destination="-1" eventType="touchUpInside" id="Nxo-7i-znb"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dna-3m-730">
                     <rect key="frame" x="73" y="110" width="268" height="178"/>
                     <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                 </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZVV-cU-wS2">
+                    <rect key="frame" x="182" y="751" width="50" height="46"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -89,14 +101,18 @@
                 <constraint firstItem="O2v-98-Wcd" firstAttribute="leading" secondItem="bT8-0w-Us5" secondAttribute="leading" id="FKR-Ul-G7N"/>
                 <constraint firstItem="dna-3m-730" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="73" id="G4M-9Y-kVA"/>
                 <constraint firstItem="NgC-KN-aFl" firstAttribute="top" secondItem="bT8-0w-Us5" secondAttribute="bottom" constant="95" id="L7w-FH-0oW"/>
+                <constraint firstItem="ZVV-cU-wS2" firstAttribute="top" secondItem="NgC-KN-aFl" secondAttribute="bottom" constant="33" id="Pia-he-9pC"/>
                 <constraint firstItem="O2v-98-Wcd" firstAttribute="trailing" secondItem="bT8-0w-Us5" secondAttribute="trailing" id="Wh8-Nf-1gi"/>
                 <constraint firstItem="XiZ-hZ-1aI" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="XtP-7a-3gS"/>
                 <constraint firstItem="XiZ-hZ-1aI" firstAttribute="leading" secondItem="e8f-4c-4BJ" secondAttribute="leading" id="YVB-ru-MPR"/>
+                <constraint firstItem="ZVV-cU-wS2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="182" id="a06-lb-rPr"/>
                 <constraint firstItem="bHi-bB-Ffx" firstAttribute="leading" secondItem="O2v-98-Wcd" secondAttribute="leading" id="d5f-aA-x0s"/>
                 <constraint firstItem="O2v-98-Wcd" firstAttribute="top" secondItem="bHi-bB-Ffx" secondAttribute="bottom" constant="13" id="ejj-lW-eZD"/>
                 <constraint firstItem="bT8-0w-Us5" firstAttribute="leading" secondItem="NgC-KN-aFl" secondAttribute="leading" id="hDW-3R-CVM"/>
                 <constraint firstItem="e8f-4c-4BJ" firstAttribute="trailing" secondItem="bHi-bB-Ffx" secondAttribute="trailing" id="iOH-N8-6eK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZVV-cU-wS2" secondAttribute="bottom" constant="65" id="jR7-Uj-w7p"/>
                 <constraint firstItem="e8f-4c-4BJ" firstAttribute="top" secondItem="XiZ-hZ-1aI" secondAttribute="bottom" constant="69" id="kyv-Nj-bc2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZVV-cU-wS2" secondAttribute="trailing" constant="182" id="opp-jM-tCT"/>
                 <constraint firstItem="e8f-4c-4BJ" firstAttribute="leading" secondItem="bHi-bB-Ffx" secondAttribute="leading" id="pk4-G7-wTH"/>
                 <constraint firstItem="bHi-bB-Ffx" firstAttribute="trailing" secondItem="O2v-98-Wcd" secondAttribute="trailing" id="qfL-FG-Sps"/>
                 <constraint firstItem="dna-3m-730" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="tQp-Sh-VdB"/>

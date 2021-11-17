@@ -6,8 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 
 class LoginPresenter {
     
+    var view: LoginController?
+    
+    init(){
+        
+    }
+    
+    func attachView(view: LoginController){
+        self.view = view
+    }
+    
+    func validateFields(){
+        view?.startLoading()
+    }
 }

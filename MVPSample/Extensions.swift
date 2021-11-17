@@ -42,7 +42,7 @@ extension LoginPresenter {
         }
     }
     
-   /* func isUserRegistered(users: [Users], usuario: String) -> Bool{
+   func isUserRegistered(users: [Users], usuario: String) -> Bool{
         var encontrado = false
         for user in users {
             if (usuario.elementsEqual(user.email)) {
@@ -73,5 +73,5 @@ extension LoginPresenter {
             }
         }
         return name
-    }*/
+    }
 }
