@@ -34,6 +34,7 @@ class LoginController: UIViewController, LoginProtocol {
     
     func setUI(){
         self.spinner.hidesWhenStopped = true
+        self.spinner.isHidden = true
         //self.passTfd.secureTextEntry = true
         presenter = LoginPresenter()
         presenter?.attachView(view: self)
@@ -55,7 +56,9 @@ class LoginController: UIViewController, LoginProtocol {
     
     func pushView() {
         let home = HomeController(nibName: "HomeController", bundle: .main)
-        navigationController?.pushViewController(home, animated: true)
+        home.modalTransitionStyle = .crossDissolve
+        home.modalPresentationStyle = .fullScreen
+        self.present(home, animated: true)
     }
     
     func pushModal(title: String, message: String) {
