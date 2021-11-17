@@ -17,7 +17,11 @@ class ExternalDataManager {
         return instance
      }()
     
-    func getDataFromServer(onSuccess success: @escaping([Users])->(), onFailure failure: @escaping(String)->()) {
+    func getDataLoginFromServer(onSuccess success: @escaping([Users])->(), onFailure failure: @escaping(String)->()) {
+        
+    }
+    
+    func getDataUserFromServer(onSuccess success: @escaping([Users])->(), onFailure failure: @escaping(String)->()) {
         
     }
     

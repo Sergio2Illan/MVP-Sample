@@ -50,9 +50,11 @@ class LoginController: UIViewController, LoginProtocol {
         }
     }
     
-    func getDataData() {
-        
+    func pushView() {
+        let home = HomeController(nibName: "HomeController", bundle: .main)
+        navigationController?.pushViewController(home, animated: true)
     }
+    
     
 
 }

@@ -30,10 +30,10 @@ class LoginPresenter {
             if (pass.count > 0 && pass != "" ) {
                 if isValidEmail(testStr: name){
                     if isValidPassword(pass: pass){
-                        ExternalDataManager.shared.getDataFromServer { data in
+                        ExternalDataManager.shared.getDataLoginFromServer { data in
                             
                             //TODO: Call function to validate data
-                            
+                            self.view?.pushView()
                         } onFailure: { error in
                             //TODO: Show error menssaged
                         }
@@ -51,5 +51,10 @@ class LoginPresenter {
             //TODO: Show error menssage
         }
         
+    }
+    
+    
+    private func signIn(){
+        view?.stopLoading()
     }
 }

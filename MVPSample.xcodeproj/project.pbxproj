@@ -23,6 +23,8 @@
 		E6C2704B2744FF8700069C9E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C270492744FF8700069C9E /* LoginController.swift */; };
 		E6C2704C2744FF8700069C9E /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C2704A2744FF8700069C9E /* LoginController.xib */; };
 		E6C2704E274544FF00069C9E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2704D274544FF00069C9E /* CustomButton.swift */; };
+		E6C270562745734400069C9E /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C270542745734400069C9E /* HomeController.swift */; };
+		E6C270572745734400069C9E /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C270552745734400069C9E /* HomeController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E6C270492744FF8700069C9E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = MVPSample/LoginController.swift; sourceTree = SOURCE_ROOT; };
 		E6C2704A2744FF8700069C9E /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginController.xib; path = MVPSample/LoginController.xib; sourceTree = SOURCE_ROOT; };
 		E6C2704D274544FF00069C9E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E6C270542745734400069C9E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		E6C270552745734400069C9E /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 				E6C270292744E46B00069C9E /* Extensions */,
 				E6C270262744E45700069C9E /* DataManager */,
 				E6C270252744E45000069C9E /* Login */,
+				E6C2704F27454A4700069C9E /* Home */,
 				E6A2CEAC2744DE1600950B6A /* AppDelegate.swift */,
 				E6A2CEAE2744DE1600950B6A /* SceneDelegate.swift */,
 				E6A2CEB52744DE1900950B6A /* Assets.xcassets */,
@@ -210,6 +215,47 @@
 				E6C2704D274544FF00069C9E /* CustomButton.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6C2704F27454A4700069C9E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E6C27053274572E000069C9E /* Model */,
+				E6C27052274572CB00069C9E /* Protocols */,
+				E6C27051274572C400069C9E /* Presenter */,
+				E6C2705027454A5700069C9E /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E6C2705027454A5700069C9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6C270542745734400069C9E /* HomeController.swift */,
+				E6C270552745734400069C9E /* HomeController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E6C27051274572C400069C9E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E6C27052274572CB00069C9E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E6C27053274572E000069C9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6C270572745734400069C9E /* HomeController.xib in Resources */,
 				E6A2CEB92744DE1900950B6A /* LaunchScreen.storyboard in Resources */,
 				E6C2704C2744FF8700069C9E /* LoginController.xib in Resources */,
 				E6A2CEB62744DE1900950B6A /* Assets.xcassets in Resources */,
@@ -345,6 +392,7 @@
 			files = (
 				E6C270422744FE9200069C9E /* Extensions.swift in Sources */,
 				E6C270482744FF6600069C9E /* LoginProtocol.swift in Sources */,
+				E6C270562745734400069C9E /* HomeController.swift in Sources */,
 				E6C2703E2744FE2500069C9E /* Constants.swift in Sources */,
 				E6C270462744FEEC00069C9E /* ExternalDataManager.swift in Sources */,
 				E6C2704E274544FF00069C9E /* CustomButton.swift in Sources */,
