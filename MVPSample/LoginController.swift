@@ -15,7 +15,7 @@ class LoginController: UIViewController, LoginProtocol {
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var titleLogo: UILabel!
     @IBOutlet weak var userTfd: UITextField!
-    @IBOutlet weak var sigInBtn: UIButton!
+    @IBOutlet weak var sigInBtn: CustomButton!
     @IBOutlet weak var passTfd: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
@@ -23,13 +23,11 @@ class LoginController: UIViewController, LoginProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-
-        
     }
 
 
     @IBAction func didSignIn(_ sender: Any) {
-        presenter?.validateFields()
+        presenter?.validateFields(name: userTfd.text, pass: passTfd.text)
     }
     
     func setUI(){

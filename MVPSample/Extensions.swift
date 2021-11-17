@@ -10,14 +10,6 @@ import UIKit
 
 extension LoginPresenter {
     
-    func showAlert(title: String, mensaje: String, vc: UIViewController){
-        let alert = UIAlertController(title: title, message: mensaje, preferredStyle: .alert)
-        
-        let okButton = UIAlertAction(title: "Aceptar", style: .default) { done in
-        }
-        alert.addAction(okButton)
-        vc.present(alert, animated: true, completion: nil)
-    }
     
     func isValidEmail(testStr:String) -> Bool {
         print("validate emilId: \(testStr)")
@@ -73,5 +65,17 @@ extension LoginPresenter {
             }
         }
         return name
+    }
+}
+
+
+extension UIViewController {
+    func showAlert(title: String, mensaje: String, vc: UIViewController){
+        let alert = UIAlertController(title: title, message: mensaje, preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: "Accept", style: .default) { done in
+        }
+        alert.addAction(okButton)
+        vc.present(alert, animated: true, completion: nil)
     }
 }

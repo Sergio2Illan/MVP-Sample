@@ -22,6 +22,7 @@
 		E6C270482744FF6600069C9E /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C270472744FF6600069C9E /* LoginProtocol.swift */; };
 		E6C2704B2744FF8700069C9E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C270492744FF8700069C9E /* LoginController.swift */; };
 		E6C2704C2744FF8700069C9E /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6C2704A2744FF8700069C9E /* LoginController.xib */; };
+		E6C2704E274544FF00069C9E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C2704D274544FF00069C9E /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E6C270472744FF6600069C9E /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginProtocol.swift; path = MVPSample/LoginProtocol.swift; sourceTree = SOURCE_ROOT; };
 		E6C270492744FF8700069C9E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = MVPSample/LoginController.swift; sourceTree = SOURCE_ROOT; };
 		E6C2704A2744FF8700069C9E /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginController.xib; path = MVPSample/LoginController.xib; sourceTree = SOURCE_ROOT; };
+		E6C2704D274544FF00069C9E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C2703D2744FE2500069C9E /* Constants.swift */,
+				E6C2704D274544FF00069C9E /* CustomButton.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				E6C270482744FF6600069C9E /* LoginProtocol.swift in Sources */,
 				E6C2703E2744FE2500069C9E /* Constants.swift in Sources */,
 				E6C270462744FEEC00069C9E /* ExternalDataManager.swift in Sources */,
+				E6C2704E274544FF00069C9E /* CustomButton.swift in Sources */,
 				E6C2704B2744FF8700069C9E /* LoginController.swift in Sources */,
 				E6A2CEAD2744DE1600950B6A /* AppDelegate.swift in Sources */,
 				E6A2CEAF2744DE1600950B6A /* SceneDelegate.swift in Sources */,
