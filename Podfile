@@ -6,6 +6,8 @@ target 'MVPSample' do
   use_frameworks!
   pod 'Alamofire', '~> 5.4'
   pod 'SkeletonView'
+  pod 'RNCryptor', '~> 5.0'
+
   # Pods for MVPSample
 
   target 'MVPSampleTests' do
