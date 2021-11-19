@@ -282,7 +282,6 @@
 		E6C2704F27454A4700069C9E /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E645122A2747BBE500D873FD /* CellView */,
 				E6C27053274572E000069C9E /* Model */,
 				E6C27052274572CB00069C9E /* Protocols */,
 				E6C27051274572C400069C9E /* Presenter */,
@@ -294,6 +293,7 @@
 		E6C2705027454A5700069C9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E645122A2747BBE500D873FD /* CellView */,
 				E6C270542745734400069C9E /* HomeController.swift */,
 				E6C270552745734400069C9E /* HomeController.xib */,
 			);

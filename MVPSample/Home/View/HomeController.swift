@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSource, HomeProtocol{
     
@@ -14,6 +15,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var webLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     var presenter: HomePresenter?
     
@@ -23,11 +25,12 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setupSkelleton()
         loadData()
-        
     }
     
     private func setUI(){
+        self.spinner.startAnimating()
         
         presenter = HomePresenter()
         presenter?.attachView(view: self)
@@ -42,11 +45,33 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setTableCell()
     }
     
+    private func setupSkelleton(){
+        nameLbl.isSkeletonable = true
+        nameLbl.linesCornerRadius = 8
+        emailLbl.isSkeletonable = true
+        emailLbl.linesCornerRadius = 8
+        webLbl.isSkeletonable = true
+        webLbl.linesCornerRadius = 8
+        imageProfile.isSkeletonable = true
+        
+        tableView.isSkeletonable = true
+    }
+    
     
     private func loadData(){
         guard let usu = user else {return}
         
+        nameLbl.showAnimatedGradientSkeleton()
+        emailLbl.showAnimatedGradientSkeleton()
+        webLbl.showAnimatedGradientSkeleton()
+        imageProfile.showAnimatedGradientSkeleton()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.nameLbl.hideSkeleton()
+            self.emailLbl.hideSkeleton()
+            self.webLbl.hideSkeleton()
+            self.imageProfile.hideSkeleton()
+            
             self.nameLbl.text = usu.name
             self.emailLbl.text = usu.email
             self.webLbl.text = usu.website
@@ -54,8 +79,14 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        self.tableView.showAnimatedGradientSkeleton()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+            self.spinner.stopAnimating()
+            self.spinner.hidesWhenStopped = true
             self.tableView.reloadData()
+            self.tableView.hideSkeleton()
+            
         }
     }
     

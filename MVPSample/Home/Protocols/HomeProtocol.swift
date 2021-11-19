@@ -13,5 +13,6 @@ protocol HomeProtocol {
     
     func setMonsters(monsters: [Monsters])
     func pushModal(title: String, message: String)
+
     
 }
