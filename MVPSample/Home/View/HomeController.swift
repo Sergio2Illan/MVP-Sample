@@ -18,12 +18,12 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var presenter: HomePresenter?
     
     var user:Users?
-    var monsters: [Monsters] = []
+    private var monsters: [Monsters] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        
+        loadData()
         
     }
     
@@ -40,6 +40,23 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         setImageProfile(profile: imageProfile)
         setTableCell()
+    }
+    
+    
+    private func loadData(){
+        guard let usu = user else {return}
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.nameLbl.text = usu.name
+            self.emailLbl.text = usu.email
+            self.webLbl.text = usu.website
+            self.imageProfile.image = UIImage(named: "me")
+        }
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.tableView.reloadData()
+        }
     }
     
     
@@ -79,7 +96,7 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func setMonsters(monsters: [Monsters]) {
         self.monsters = monsters
-        self.tableView.reloadData()
+        //self.tableView.reloadData()
     }
     
     func pushModal(title: String, message: String) {
