@@ -24,12 +24,15 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         setUI()
         
+        
     }
     
     private func setUI(){
         
         presenter = HomePresenter()
         presenter?.attachView(view: self)
+        presenter?.callServer()
+        
         
         nameLbl.text = "..."
         emailLbl.text = ""
@@ -59,8 +62,9 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell") as! CustomCell
-        
-        
+        cell.imagen.image = parseStringToImage(imageUrlString: monsters[indexPath.row].image)
+        cell.titleLbl.text = monsters[indexPath.row].name
+        cell.subtitleLbl.text = "Gotta Catch ‘Em All!"
         return cell
     }
     
@@ -70,11 +74,16 @@ class HomeController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 120.0
     }
     
-    func setMonsters() {
-        
+    func setMonsters(monsters: [Monsters]) {
+        self.monsters = monsters
+        self.tableView.reloadData()
+    }
+    
+    func pushModal(title: String, message: String) {
+        showAlert(title: title, mensaje: message, vc: self)
     }
     
 

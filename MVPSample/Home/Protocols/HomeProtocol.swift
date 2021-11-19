@@ -11,6 +11,7 @@ import Foundation
 protocol HomeProtocol {
     var presenter: HomePresenter?  { get set }
     
-    func setMonsters()
+    func setMonsters(monsters: [Monsters])
+    func pushModal(title: String, message: String)
     
 }

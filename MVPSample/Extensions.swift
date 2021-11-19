@@ -116,6 +116,18 @@ extension UIViewController {
         profile.layer.cornerRadius = profile.bounds.height / 2.3
     }
     
+    func parseStringToImage(imageUrlString: String) -> UIImage {
+        let imageUrl = URL(string: imageUrlString)!
+         
+         let imageData = try! Data(contentsOf: imageUrl)
+
+        let image = UIImage(data: imageData)!
+        
+        
+        return image
+    }
+    
 }
+
 
 

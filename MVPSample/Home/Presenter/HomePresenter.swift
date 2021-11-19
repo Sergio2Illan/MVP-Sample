@@ -21,5 +21,13 @@ class HomePresenter {
         self.view = view
     }
     
+    func callServer(){
+        ExternalDataManager.shared.getCapturedMonstersFromServer { monsters in
+            self.view?.setMonsters(monsters: monsters)
+        } onFailure: { error in
+            self.view?.pushModal(title: "Error", message: error)        }
+
+    }
+    
     
 }
