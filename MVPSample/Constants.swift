@@ -13,7 +13,7 @@ struct Constants {
         
         static let url = "https://private-6c8c4-worklist2.apiary-mock.com"
         static let endpointUsers = "/users"
-        static let endpointList = "/workList"
+        static let endpointList = "/monsters"
         static let endpointCities = "/geoCities"
     }
     

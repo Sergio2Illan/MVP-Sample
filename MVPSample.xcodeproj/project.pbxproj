@@ -10,6 +10,10 @@
 		31A37677CDCA12A90DD7C572 /* Pods_MVPSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2905DEB2CC208D894897D843 /* Pods_MVPSampleTests.framework */; };
 		50186CDB8800EC30D5F77C5B /* Pods_MVPSample_MVPSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29634EB64946C8B4E8FD40B6 /* Pods_MVPSample_MVPSampleUITests.framework */; };
 		5DD6CD783C224E8428B37009 /* Pods_MVPSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 779BCC15E6062B1A8F1E8E2A /* Pods_MVPSample.framework */; };
+		E64512292747ACEB00D873FD /* InternalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64512282747ACEB00D873FD /* InternalDataManager.swift */; };
+		E645122D2747BC1A00D873FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645122B2747BC1A00D873FD /* CustomCell.swift */; };
+		E645122E2747BC1A00D873FD /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E645122C2747BC1A00D873FD /* CustomCell.xib */; };
+		E64512302747BF3600D873FD /* Monsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645122F2747BF3600D873FD /* Monsters.swift */; };
 		E6A2CEAD2744DE1600950B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2CEAC2744DE1600950B6A /* AppDelegate.swift */; };
 		E6A2CEAF2744DE1600950B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2CEAE2744DE1600950B6A /* SceneDelegate.swift */; };
 		E6A2CEB62744DE1900950B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A2CEB52744DE1900950B6A /* Assets.xcassets */; };
@@ -56,6 +60,10 @@
 		8470D1334BB702C2EC8020BD /* Pods-MVPSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.release.xcconfig"; path = "Target Support Files/Pods-MVPSample/Pods-MVPSample.release.xcconfig"; sourceTree = "<group>"; };
 		884F87B00C7B8663B80255C1 /* Pods-MVPSample-MVPSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample-MVPSampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVPSample-MVPSampleUITests/Pods-MVPSample-MVPSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E60144629D8D4D23B2D7B07E /* Pods-MVPSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVPSample.debug.xcconfig"; path = "Target Support Files/Pods-MVPSample/Pods-MVPSample.debug.xcconfig"; sourceTree = "<group>"; };
+		E64512282747ACEB00D873FD /* InternalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InternalDataManager.swift; path = MVPSample/InternalDataManager.swift; sourceTree = SOURCE_ROOT; };
+		E645122B2747BC1A00D873FD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		E645122C2747BC1A00D873FD /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		E645122F2747BF3600D873FD /* Monsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monsters.swift; sourceTree = "<group>"; };
 		E6A2CEA92744DE1600950B6A /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A2CEAC2744DE1600950B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6A2CEAE2744DE1600950B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,8 +137,16 @@
 				68CF52CCFC30F75092C1282C /* Pods-MVPSampleTests.debug.xcconfig */,
 				2D3101E9B7040C5C10B9CFD6 /* Pods-MVPSampleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E645122A2747BBE500D873FD /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				E645122B2747BC1A00D873FD /* CustomCell.swift */,
+				E645122C2747BC1A00D873FD /* CustomCell.xib */,
+			);
+			path = CellView;
 			sourceTree = "<group>";
 		};
 		E6A2CEA02744DE1600950B6A = {
@@ -204,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C270452744FEEC00069C9E /* ExternalDataManager.swift */,
+				E64512282747ACEB00D873FD /* InternalDataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -261,6 +278,7 @@
 		E6C2704F27454A4700069C9E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E645122A2747BBE500D873FD /* CellView */,
 				E6C27053274572E000069C9E /* Model */,
 				E6C27052274572CB00069C9E /* Protocols */,
 				E6C27051274572C400069C9E /* Presenter */,
@@ -273,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				E6C270542745734400069C9E /* HomeController.swift */,
+				E645122F2747BF3600D873FD /* Monsters.swift */,
 				E6C270552745734400069C9E /* HomeController.xib */,
 			);
 			path = View;
@@ -408,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E645122E2747BC1A00D873FD /* CustomCell.xib in Resources */,
 				E6C270572745734400069C9E /* HomeController.xib in Resources */,
 				E6A2CEB92744DE1900950B6A /* LaunchScreen.storyboard in Resources */,
 				E6C2704C2744FF8700069C9E /* LoginController.xib in Resources */,
@@ -540,15 +560,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C270422744FE9200069C9E /* Extensions.swift in Sources */,
+				E645122D2747BC1A00D873FD /* CustomCell.swift in Sources */,
 				E6C270482744FF6600069C9E /* LoginProtocol.swift in Sources */,
 				E6C270562745734400069C9E /* HomeController.swift in Sources */,
 				E6C2703E2744FE2500069C9E /* Constants.swift in Sources */,
 				E6C270462744FEEC00069C9E /* ExternalDataManager.swift in Sources */,
 				E6C2704E274544FF00069C9E /* CustomButton.swift in Sources */,
 				E6C2704B2744FF8700069C9E /* LoginController.swift in Sources */,
+				E64512302747BF3600D873FD /* Monsters.swift in Sources */,
 				E6A2CEAD2744DE1600950B6A /* AppDelegate.swift in Sources */,
 				E6A2CEAF2744DE1600950B6A /* SceneDelegate.swift in Sources */,
 				E6C270442744FED100069C9E /* Users.swift in Sources */,
+				E64512292747ACEB00D873FD /* InternalDataManager.swift in Sources */,
 				E6C270402744FE6800069C9E /* LoginPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

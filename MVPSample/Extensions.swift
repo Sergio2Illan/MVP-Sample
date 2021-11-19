@@ -107,4 +107,12 @@ extension UIViewController {
         alert.addAction(okButton)
         vc.present(alert, animated: true, completion: nil)
     }
+    
+    func setImageProfile(profile: UIImageView){
+        profile.layer.borderColor = UIColor.systemBlue.cgColor
+        profile.layer.borderWidth = 2
+        profile.layer.cornerRadius = profile.bounds.height / 2
+        profile.clipsToBounds = true
+    }
 }
+
