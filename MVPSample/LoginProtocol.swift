@@ -12,7 +12,7 @@ protocol LoginProtocol {
     var presenter: LoginPresenter?  { get set }
     func startLoading()
     func stopLoading()
-    func pushView()
+    func pushView(user: Users)
     func pushModal(title: String, message: String)
     
 }

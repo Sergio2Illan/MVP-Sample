@@ -14,6 +14,8 @@
 		E645122D2747BC1A00D873FD /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645122B2747BC1A00D873FD /* CustomCell.swift */; };
 		E645122E2747BC1A00D873FD /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E645122C2747BC1A00D873FD /* CustomCell.xib */; };
 		E64512302747BF3600D873FD /* Monsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E645122F2747BF3600D873FD /* Monsters.swift */; };
+		E64512322747D13600D873FD /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64512312747D13600D873FD /* HomeProtocol.swift */; };
+		E64512352747D1B800D873FD /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64512332747D18C00D873FD /* HomePresenter.swift */; };
 		E6A2CEAD2744DE1600950B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2CEAC2744DE1600950B6A /* AppDelegate.swift */; };
 		E6A2CEAF2744DE1600950B6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A2CEAE2744DE1600950B6A /* SceneDelegate.swift */; };
 		E6A2CEB62744DE1900950B6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6A2CEB52744DE1900950B6A /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		E645122B2747BC1A00D873FD /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E645122C2747BC1A00D873FD /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E645122F2747BF3600D873FD /* Monsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monsters.swift; sourceTree = "<group>"; };
+		E64512312747D13600D873FD /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		E64512332747D18C00D873FD /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomePresenter.swift; path = MVPSample/Home/Presenter/HomePresenter.swift; sourceTree = SOURCE_ROOT; };
 		E6A2CEA92744DE1600950B6A /* MVPSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6A2CEAC2744DE1600950B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6A2CEAE2744DE1600950B6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,7 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				E6C270542745734400069C9E /* HomeController.swift */,
-				E645122F2747BF3600D873FD /* Monsters.swift */,
 				E6C270552745734400069C9E /* HomeController.xib */,
 			);
 			path = View;
@@ -300,6 +303,7 @@
 		E6C27051274572C400069C9E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E64512332747D18C00D873FD /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -307,6 +311,7 @@
 		E6C27052274572CB00069C9E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E64512312747D13600D873FD /* HomeProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 		E6C27053274572E000069C9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E645122F2747BF3600D873FD /* Monsters.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				E645122D2747BC1A00D873FD /* CustomCell.swift in Sources */,
 				E6C270482744FF6600069C9E /* LoginProtocol.swift in Sources */,
 				E6C270562745734400069C9E /* HomeController.swift in Sources */,
+				E64512322747D13600D873FD /* HomeProtocol.swift in Sources */,
 				E6C2703E2744FE2500069C9E /* Constants.swift in Sources */,
 				E6C270462744FEEC00069C9E /* ExternalDataManager.swift in Sources */,
 				E6C2704E274544FF00069C9E /* CustomButton.swift in Sources */,
@@ -573,6 +580,7 @@
 				E6C270442744FED100069C9E /* Users.swift in Sources */,
 				E64512292747ACEB00D873FD /* InternalDataManager.swift in Sources */,
 				E6C270402744FE6800069C9E /* LoginPresenter.swift in Sources */,
+				E64512352747D1B800D873FD /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -111,8 +111,11 @@ extension UIViewController {
     func setImageProfile(profile: UIImageView){
         profile.layer.borderColor = UIColor.systemBlue.cgColor
         profile.layer.borderWidth = 2
-        profile.layer.cornerRadius = profile.bounds.height / 2
         profile.clipsToBounds = true
+        profile.layer.masksToBounds = false
+        profile.layer.cornerRadius = profile.bounds.height / 2.3
     }
+    
 }
+
 

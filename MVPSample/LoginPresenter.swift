@@ -35,7 +35,7 @@ class LoginPresenter {
                                 //TODO: Save user data to present in the home
                                 let user = self.getUser(users: data, user: user)
                                 self.view?.stopLoading()
-                                self.view?.pushView()
+                                self.view?.pushView(user: user)
                             }
                             
                         } onFailure: { error in

@@ -54,10 +54,11 @@ class LoginController: UIViewController, LoginProtocol {
         }
     }
     
-    func pushView() {
+    func pushView(user: Users) {
         let home = HomeController(nibName: "HomeController", bundle: .main)
         home.modalTransitionStyle = .crossDissolve
         home.modalPresentationStyle = .fullScreen
+        home.user = user
         self.present(home, animated: true)
     }
     
